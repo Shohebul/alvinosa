@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<table class="container mt-5 table table-striped table-info table-bordered table-responsive-sm table-responsive-md">
+    <thead>
+      <tr>
+        <th scope="col">No.</th>
+        <th scope="col">Nama</th>
+        <th scope="col">Kampus</th>
+        <th scope="col">Agama</th>
+        <th scope="col">Organisasi</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for random in random %}
+      <tr>
+        <th scope="row">{{ random.id }}</th>
+        <td>{{ random.nama }}</td>
+        <td>{{ random.kampus }}</td>
+        <td>{{ random.agama }}</td>
+        <td>{{ random.organisasi }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock  %}
